@@ -1,0 +1,32 @@
+5.1
+module	/
+print_n n=2, s="Hello", print "Hello", n-1
+print_n n=1, s="Hello", print "Hello", n-1
+print_n n=0, return
+
+
+5.2
+
+def do_n(s,n):
+	if n <=0:
+		return
+	print s
+	do_n(s, n-1)
+
+5.3
+
+
+def check_fermat(a,b,c,n):
+	if a**n+b**n == c**n:
+		print "Holy Smokes! He was wrong!!!"
+	else: 
+		print "No, that doesn't work."
+
+
+prompt = "please values to check ferments theorm. Start with A\n"
+user_input_a = int(raw_input(prompt))
+user_input_b = int(raw_input('and b\n'))
+user_input_c = int(raw_input('and c\n'))
+user_input_e = int(raw_input('and the exponent\n'))
+
+print check_fermat(user_input_a,user_input_b,user_input_c,user_input_e)

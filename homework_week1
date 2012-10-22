@@ -1,0 +1,111 @@
+1.1
+My well ( structured $ sentance is 5 in shambles
+Again said to me he down fall the well!
+1.2
+done.
+1.3
+done
+1.4
+I was running 7.003 minute miles
+2.1
+done. it looks like it is interpreting this as base 8
+2.2
+There is no output until we add print statements. Print statement will failed on the 2nd statement as it is 
+just an assignment
+fixed:
+#! /usr/bin/python
+print 5
+x = 5
+print (x + 1)
+2.3
+	1. 8
+	2. 8.5
+	3. 4.0
+	4. 11
+	5. '.....'
+2.4
+	1.  print (4/3*math.pi *5**3)
+		523.598
+	2. 	base_price=24.95*.6
+		total_books=60
+		print (base_price * total_books*.75+2.25)
+		675.9
+	3. 7:30:10
+
+3.1
+	RuntimeError: maximum recursion depth exceeded
+3.2
+	NameError: global name 'print_lyrics' is not defined
+3.3
+	def right_justify(s):
+		hops = 70-len(s)
+		print ((' '*hops)+s)
+3.4
+	def print_twice(parm):
+		print parm
+		print parm
+
+	def do_four(parm, x):
+		parm(x)
+		parm(x)
+
+3.5
+def print_side():
+                print '|         |         |'
+                print '|         |         |'
+                print '|         |         |'
+                print '|         |         |'
+
+        def print_bar():
+                print '+ - - - - + - - - - +'
+
+
+        def box_layout():
+                print_bar()
+                print_side()
+                print_bar()
+                print_side()
+                print_bar()
+
+
+### the more complicated way I think but more granular and easy to tweak. This is the 4x4
+
+def do_four(arg):
+	arg()
+	arg()
+	arg()
+	arg()
+
+
+
+def print_beam():
+	print '+ - - - -',
+
+
+	
+def print_bar():
+	do_four(print_beam),
+	print '+'
+
+
+
+def print_side():
+	print '|        ',
+
+
+
+def print_row():
+	do_four(print_side),
+	print '|'
+
+
+
+def grid_part():
+	print_bar()
+	do_four(print_row)
+
+
+
+def grid():
+	do_four(grid_part)
+	print_bar()
