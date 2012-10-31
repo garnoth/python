@@ -1,0 +1,45 @@
+Strings
+delimitation: ",',""".
+
+ascii in 2x, unicode in 3x
+
+print chr(65)
+
+print bin(42)
+
+print oct(42)
+print unichr(172)
+
+strings are immutable
+
+we can convert them to a list and then modify
+
+'in' is a membership operator
+
+import string
+
+'banana'.find('n')
+returns index
+
+string.rstrip will strip-off white space
+
+%d is a format operator
+
+=====files
+
+open function is the old way
+
+f=file is the new way
+f=file(filename,mode,buffering)
+
+mode is r,w,a, or rb,wb,ab
+buffering. 0 is unbuffered.
+1 is for lines buffered
+
+mode a, appends to the end of the file
+
+raw string:
+
+x = r"C:\test"
+
+this avoids the \t being seen as a tab
