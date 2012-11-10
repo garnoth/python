@@ -1,23 +1,19 @@
 #!/usr/bin/python2
 
-
-def sed(input1, input2, file1, file2):
-    try:
-        f = open(file1, r)
-        for line in f:
-            print line
-        f.close()
-    except:
-        print "woah, something happened? Perhaps the file didn't exist"
-
-#sed('m','e','me.txt', 'w')
-
-def sed(i1, i2, filename, outfile):
+def sed(target, pattern, filename, outfile):
+##replaces target with pattern, reading from filename and writing to outfile
 	try:
-		f = open(filename)
-		for line in f:
-			print line
+		f = open(filename, 'r')
+		fout = open(outfile, 'w')
 	except:
-		print "eek"
-
-sed('1', '2', 'me.txt', '3')
+		print "eek, somethings wrong. I probably couldn't open the target file"
+		return
+	for line in f:
+		if target in line:		
+			fout.write(line.replace(target, pattern))
+		else:
+			fout.write(line)
+	
+	f.close()
+	fout.close()
+sed('peter', 'hannah', 'me.txt', 'out.txt')

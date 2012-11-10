@@ -43,3 +43,5 @@ raw string:
 x = r"C:\test"
 
 this avoids the \t being seen as a tab
+
+try, except, else, finally
