@@ -1,6 +1,9 @@
 #!/usr/bin/python2
 
+import anydbm
 import os
+
+db = anydbm.open('md5.db', 'c')
 
 def walk(dirname):
 	"""Prints the names of all files in dirname and its subdirectories.
@@ -19,6 +22,6 @@ def walk(dirname):
 		
 		else:
 			walk(path)
-
+	db.close()
 
 walk('/home/chill/python/python/week4')
