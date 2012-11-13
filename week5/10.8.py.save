@@ -1,0 +1,16 @@
+#!/usr/bin/python2
+
+str = '1nnahah'
+str2 = 'hannah1'
+
+def is_anagramfa(word1, word2):
+	s1 = list(word1)
+	s2 = list(word2)
+	s1.sort()
+	s2.sort()
+	for i in range(len(s1)):
+		if not s1[i] == s2[i]:
+			return False
+	return True
+
+print is_anagram(str, str2)
